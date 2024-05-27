@@ -4,7 +4,7 @@
     "start_url":"https://ave-maria-pwa.vercel.app/",
     "display":"fullscreen",
     "background_color": "white",
-    "theme_color": "#141414",
+    "theme_color": "black",
     "description": "Автошкола",
     "display_override": ["window-controls-overlay"],
     "icons": [
