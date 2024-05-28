@@ -7,7 +7,39 @@ import { VitePWA } from 'vite-plugin-pwa'
 export default defineConfig({
   plugins: [
     vue(),
-    VitePWA({ registerType: 'autoUpdate' })
+    VitePWA({ 
+      registerType: 'autoUpdate', 
+      manifest:{
+        "icons": [
+          {
+            "src": "favicon-32x32.png",
+            "sizes": "32x32",
+            "type": "image/png"
+          },
+          {
+            "src": "assets/download.png",
+            "sizes": "144x144",
+            "type": "image/png",
+            "purpose":"any maskable"
+          },
+          {
+            "src": "apple-touch-icon.png",
+            "sizes": "180x180",
+            "type": "image/png"
+          },
+          {
+            "src": "android-chrome.png",
+            "sizes": "192x192",
+            "type": "image/png"
+          }, 
+          {
+            "src": "android-chrome-256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+          }
+        ]
+      }
+    })
   ],
   resolve:{
     alias:{
