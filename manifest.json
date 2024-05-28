@@ -1,7 +1,7 @@
 {
     "name":"Автошкола",
     "short_name":"Автошкола",
-    "start_url":"",
+    "start_url":"/index.html",
     "display":"fullscreen",
     "background_color": "white",
     "theme_color": "#ffffff",
@@ -10,7 +10,7 @@
     "display_override": ["window-controls-overlay"],
     "icons": [
         {
-          "src": "favicon-32x32.png",
+          "src": "/assets/favicon-32x32.png",
           "sizes": "32x32",
           "type": "image/png"
         },
@@ -20,12 +20,12 @@
           "type": "image/png"
         },
         {
-          "src": "download.png",
-          "sizes": "150x150",
+          "src": "/assets/download.png",
+          "sizes": "144x144",
           "type": "image/png"
         },
         {
-          "src": "apple-touch-icon.png",
+          "src": "/assets/apple-touch-icon.png",
           "sizes": "180x180",
           "type": "image/png"
         },
