@@ -17,7 +17,7 @@ export default defineConfig({
             "type": "image/png"
           },
           {
-            "src": "assets/download.png",
+            "src": "download.png",
             "sizes": "144x144",
             "type": "image/png",
             "purpose":"any maskable"
