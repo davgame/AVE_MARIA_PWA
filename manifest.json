@@ -20,7 +20,7 @@
           "type": "image/png"
         },
         {
-          "src": "download.png",
+          "src": "assets/download.png",
           "sizes": "144x144",
           "type": "image/png"
         },
