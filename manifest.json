@@ -1,7 +1,7 @@
 {
     "name":"Автошкола",
     "short_name":"Автошкола",
-    "start_url":"https://ave-maria-pwa.vercel.app/",
+    "start_url":"",
     "display":"fullscreen",
     "background_color": "white",
     "theme_color": "#ffffff",
@@ -15,9 +15,14 @@
           "type": "image/png"
         },
         {
-            "src": "favicon-16x16.png",
-            "sizes": "16x16",
-            "type": "image/png"
+          "src": "favicon-16x16.png",
+          "sizes": "16x16",
+          "type": "image/png"
+        },
+        {
+          "src": "download.png",
+          "sizes": "141x141",
+          "type": "image/png"
         },
         {
           "src": "apple-touch-icon.png",
