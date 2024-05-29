@@ -19,7 +19,8 @@ export default defineConfig({
           {
             "src": "download.png",
             "sizes": "144x144",
-            "type": "image/png"
+            "type": "image/png",
+            "purpose":"any"
           },
           {
             "src": "apple-touch-icon.png",
