@@ -18,7 +18,7 @@ const offlineFallbackPage = [
   "/src/assets/MiniWolks.png",
   "/src/images/ave.png",
   "/src/images/Ellipse7.png",
-  "/src/images/Ellipse8.png",
+  "/public/Ellipse8.png",
   "/src/images/Ellipse9.png"
 ];
 
