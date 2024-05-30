@@ -5,7 +5,7 @@ importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox
 const CACHE = "pwabuilder-page";
 
 // TODO: replace the following with the correct offline fallback page i.e.: const offlineFallbackPage = "offline.html";
-const offlineFallbackPage = [
+const urlsToCache = [
   "https://ave-maria-pwa.vercel.app/",
   "/src/assets/imgB.png",
   "/src/assets/imgA.png",
@@ -22,41 +22,67 @@ const offlineFallbackPage = [
   "/src/images/Ellipse9.png"
 ];
 
-self.addEventListener("message", (event) => {
-  if (event.data && event.data.type === "SKIP_WAITING") {
-    self.skipWaiting();
-  }
-});
-
-self.addEventListener('install', async (event) => {
+self.addEventListener('install', event => {
+  console.log('[Service Worker] Installing');
   event.waitUntil(
-    caches.open(CACHE)
-      .then((cache) => cache.add(offlineFallbackPage))
+    caches.open(CACHE_NAME)
+      .then(cache => {
+        console.log('[Service Worker] Caching all: app shell and content');
+        return cache.addAll(urlsToCache);
+      })
   );
 });
 
-if (workbox.navigationPreload.isSupported()) {
-  workbox.navigationPreload.enable();
-}
+self.addEventListener('activate', event => {
+  console.log('[Service Worker] Activating');
+  const cacheWhitelist = [CACHE_NAME];
+  event.waitUntil(
+    caches.keys().then(cacheNames => {
+      return Promise.all(
+        cacheNames.map(cacheName => {
+          if (cacheWhitelist.indexOf(cacheName) === -1) {
+            console.log('[Service Worker] Deleting old cache:', cacheName);
+            return caches.delete(cacheName);
+          }
+        })
+      );
+    })
+  );
+});
 
-self.addEventListener('fetch', (event) => {
-  if (event.request.mode === 'navigate') {
-    event.respondWith((async () => {
-      try {
-        const preloadResp = await event.preloadResponse;
-
-        if (preloadResp) {
-          return preloadResp;
-        }
-
-        const networkResp = await fetch(event.request);
-        return networkResp;
-      } catch (error) {
-
-        const cache = await caches.open(CACHE);
-        const cachedResp = await cache.match(offlineFallbackPage);
-        return cachedResp;
-      }
-    })());
+self.addEventListener('fetch', event => {
+  console.log('[Service Worker] Fetching', event.request.url);
+  if (event.request.destination === 'image') {
+    event.respondWith(
+      caches.match(event.request)
+        .then(cachedResponse => {
+          if (cachedResponse) {
+            console.log('[Service Worker] Found in cache', event.request.url);
+            return cachedResponse;
+          }
+          return caches.open(CACHE_NAME).then(cache => {
+            return fetch(event.request).then(response => {
+              if (!response || response.status !== 200 || response.type !== 'basic') {
+                return response;
+              }
+              console.log('[Service Worker] Caching new resource', event.request.url);
+              cache.put(event.request, response.clone());
+              return response;
+            });
+          });
+        })
+    );
+  } else {
+    event.respondWith(
+      caches.match(event.request)
+        .then(response => {
+          if (response) {
+            console.log('[Service Worker] Found in cache', event.request.url);
+            return response;
+          }
+          console.log('[Service Worker] Network request for', event.request.url);
+          return fetch(event.request);
+        })
+    );
   }
 });
