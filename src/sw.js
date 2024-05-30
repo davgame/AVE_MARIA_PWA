@@ -27,7 +27,6 @@ self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then(cache => {
-        console.log('[Service Worker] Caching all: app shell and content');
         return cache.addAll(urlsToCache);
       })
   );
