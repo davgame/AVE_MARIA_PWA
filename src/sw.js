@@ -5,7 +5,22 @@ importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox
 const CACHE = "pwabuilder-page";
 
 // TODO: replace the following with the correct offline fallback page i.e.: const offlineFallbackPage = "offline.html";
-const offlineFallbackPage = "/index.html";
+const offlineFallbackPage = [
+  "https://ave-maria-pwa.vercel.app/",
+  "/src/assets/imgB.png",
+  "/src/assets/imgA.png",
+  "/src/assets/imgD.png",
+  "/src/assets/BMW.png",
+  "/src/assets/Wolkswagen.png",
+  "/src/assets/Moto.png",
+  "/src/assets/Kia.png",
+  "/src/assets/imgD.png",
+  "/src/assets/MiniWolks.png",
+  "/src/images/ave.png",
+  "/src/images/Ellipse7.png",
+  "/src/images/Ellipse8.png",
+  "/src/images/Ellipse9.png"
+];
 
 self.addEventListener("message", (event) => {
   if (event.data && event.data.type === "SKIP_WAITING") {

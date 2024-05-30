@@ -29,7 +29,7 @@
           <div class="text-center text-gray-500 dark:text-gray-400">
               <img class="mx-auto mb-4 w-42 h-42 rounded-full" src="/src/images/Ellipse9.png" alt="Jese Avatar">
               <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                  <a>Антонов Михаил</a>
+                  <a>Самарин Николай</a>
               </h3>
               <p class="text-[#4286F7] font-medium">Инструктор</p>
           </div>
