@@ -1,11 +1,8 @@
-if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('sw.js')
-        .then(registration => {
-          console.log('Зарегестрировали', registration.scope);
-        })
-        .catch(error => {
-          console.log('Ошибка регистрации', error);
-        });
-    });
- }
+const onWorkerReady = () => {
+  console.log('SW is ready');
+}
+
+
+navigator.serviceWorker.register('sw.js');
+
+navigator.serviceWorker.ready.then(onWorkerReady);

@@ -8,7 +8,9 @@ const CACHE = "pwabuilder-page";
 const initCache = () => {
     return caches.open(CacheKey).then((cache) => {
       return cache.addAll[
-    "https://ave-maria-pwa.vercel.app/",
+    "./index.html",
+    "./Category.vue",
+    "./Instructor.vue",
     "./src/assets/imgB.png",
     "./src/assets/imgA.png",
     "./src/assets/imgD.png",
