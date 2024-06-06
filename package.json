@@ -11,7 +11,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@vercel/speed-insights": "^1.0.10",
+    "@vercel/speed-insights": "^1.0.11",
     "@vueuse/core": "^10.9.0",
     "axios": "^1.6.8",
     "boxicons": "^2.1.4",
