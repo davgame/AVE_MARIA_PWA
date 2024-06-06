@@ -1,5 +1,5 @@
 const onWorkerReady = () => {
-  console.log('SW is ready');
+  console.log('Зарегестрирован');
 }
 
 
