@@ -42,7 +42,7 @@ export default {
   methods: {
     downloadPdf() {
       const link = document.createElement('a');
-      link.href = require('src/assets/licenzia.pdf');
+      link.href = '/licenzia.pdf';
       link.download = 'licenzia.pdf';
       link.click();
     }
