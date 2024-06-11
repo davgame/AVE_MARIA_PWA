@@ -26,13 +26,13 @@
         </video>
     </div>
     <div class="lg:hidden sm:block order-3 sm:order-2 w-full h-44 mt-14 px-9 py-7 bg-[#4286F7] rounded-2xl">
-        <button class="bg-white text-[#4286F7] font-bold py-2 px-16 rounder-lg inline-flex items-center">
+        <button @click="downloadPdf" class="bg-white text-[#4286F7] font-bold py-2 px-16 rounder-lg inline-flex items-center">
             <svg class="w-6 h-6 mr-2 text-[#4286F7] dark:text-[#4286F7]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 15v2a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-2m-8 1V4m0 12-4-4m4 4 4-4"/>
             </svg>
-            <span>СКАЧАТЬ</span>
+            <span class="">СКАЧАТЬ</span>
         </button>
-        <h5 class="text-left mt-3 mb-1 text-xl ml-2 font-bold tracking-tight text-white dark:text-white">ЛИЦЕНЗИЯ</h5>
+        <h5 class="text-left mt-4 mb-1 text-xl ml-2 font-bold tracking-tight text-white dark:text-white font-Rubik">ЛИЦЕНЗИЯ</h5>
         <p class=" text-sm text-left ml-2 font-medium text-[#ECECEC] dark:text-[#ECECEC]">Лицензионное соглашение автошколы AVE MARIA</p>
     </div>
 </template>
