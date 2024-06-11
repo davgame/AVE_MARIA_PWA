@@ -8,7 +8,7 @@
             </div>
 
             <div class="hidden lg:block order-2 w-64 h-44 mt-12 ml-28 px-9 py-7 bg-[#4286F7] rounded-2xl">
-                <button class="bg-white text-[#4286F7] font-bold py-2 px-9 rounder-lg inline-flex items-center">
+                <button @click="downloadPdf" class="bg-white text-[#4286F7] font-bold py-2 px-9 rounder-lg inline-flex items-center">
                     <svg class="w-6 h-6 mr-2 text-[#4286F7] dark:text-slate-400 md:dark:text-[#4286F7]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 15v2a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-2m-8 1V4m0 12-4-4m4 4 4-4"/>
                     </svg>
@@ -37,5 +37,16 @@
     </div>
 </template>
 
-
+<script>
+export default {
+  methods: {
+    downloadPdf() {
+      const link = document.createElement('a');
+      link.href = require('src/assets/licenzia.pdf');
+      link.download = 'licenzia.pdf';
+      link.click();
+    }
+  }
+};
+</script>
 
