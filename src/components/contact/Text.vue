@@ -15,7 +15,7 @@
         </div>
         <div class="text-left">
             <p class="text-2xl lg:text-5xl font-medium tracking-wide text-[#848484] mb-4 dark:text-[#848484] ">45.0323232.///.38.981664</p>
-            <p class=" text-1xl lg:text-2xl font-semibold text-[#848484] dark:text-[#848484] sm:text-balance tracking-normal">ООО «AVE MARIA» <br/> ИНН 2311355360  <br/>Путевая улица, 1, этаж 5, офис 508 <br/>Центральный внутригородской округ, Краснодар   </p>
+            <p class=" text-1xl lg:text-2xl font-semibold text-[#848484] dark:text-[#848484] sm:text-balance tracking-normal">ООО «AVE MARIA» <br/> ИНН 2512355780  <br/>Путевая улица, 12, этаж 5, офис 508 <br/>Центральный внутригородской округ, Краснодар   </p>
             <p class="text-4xl lg:text-5xl font-medium leading-none tracking-wide text-[#4286F7] mt-4 dark:text-[#4286F7]">350015</p>
             <p class="text-3xl lg:text-4xl font-medium leading-none tracking-normal text-[#393839] mt-16 dark:text-[#4286F7]">+7 928 028-49-84</p>
             <p class="text-2xl lg:text-4xl font-medium leading-none tracking-normal text-[#393839] mt-4 dark:text-[#4286F7]" href="mailto:Ave@Maria.drive_School">Ave@Maria.drive_School</p>
