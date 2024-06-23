@@ -2,7 +2,8 @@
     <div class="flex gap-x-60 ">
         <div class="text-left lg:block hidden">
             <div class="flex justify-center py-8 rounded-[41px] w-40 h-40 border-2 mb-4 mt-4 border-[#4286F7]">
-                <img src="/src/assets/QR.png" class="w-24 h-24 " alt="QR">
+                <img src="/src/assets/QR.png" class="w-24 h-24 dark:hidden" alt="QR">
+                <img src="/src/assets/QRe.png" class="w-24 h-24 hidden dark:block " alt="QR">
             </div>
             <img src="/src/images/ave.png" alt="">
             
@@ -23,7 +24,8 @@
     </div>
     <div class="text-left block lg:hidden">
             <div class="flex justify-center py-6 rounded-[25px] w-32 h-32 lg:w-40 lg:h-40 border-2 mt-6 mb-4 lg:mb-4 lg:mt-4 border-[#4286F7]">
-                <img src="/src/assets/QR.png" class="w-20 h-20 lg:w-24 lg:h-24 " alt="QR">
+                <img src="/src/assets/QR.png" class="w-20 h-20 lg:w-24 lg:h-24 dark:hidden" alt="QR">
+                <img src="/src/assets/QRe.png" class="w-20 h-20 lg:w-24 lg:h-24 hidden dark:block" alt="QR">
             </div>
             <img src="/src/assets/Maria_mini.png" alt="">
             <a href="/licenzia.pdf" download="licenzia" type="button" class="mt-5 text-white bg-[#4286F7] hover:bg-[#000000] hover:text-white focus:ring-4 focus:outline-none focus:ring-[#4286F7]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-[#4286F7] dark:hover:text-[#4286F7] dark:hover:bg-white dark:focus:ring-white me-2 mb-2">
